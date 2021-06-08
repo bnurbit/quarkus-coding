@@ -17,3 +17,11 @@ Dependencies:
 - quarkus-resteasy
 - quarkus-junit5    general testing 
 - rest-assured      rest endpoints testing
+
+Defining properties
+- if no prefix, then it's general property for all profiles
+- if prefix %<profile-name>. then properties are used for that profile only
+- all configs: https://quarkus.io/guides/all-config
+- not all properties refresh automatically, for instance, the datasource url
+
+

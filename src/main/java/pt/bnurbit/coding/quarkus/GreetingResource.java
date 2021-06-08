@@ -20,6 +20,13 @@ public class GreetingResource {
     }
 
     @GET
+    @Path("/config")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String hello() {
+        return greetingService.hello();
+    }
+
+    @GET
     @Path("/text")
     @Produces(MediaType.TEXT_PLAIN)
     public String get() {
