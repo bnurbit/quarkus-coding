@@ -31,7 +31,7 @@ public class GreetingResourceTest {
                 .get("/hello/config")
                 .then()
                 .statusCode(200)
-                .body(is("null-test-english-country-CountryName:000"));
+                .body(is("null-test-english-country-CountryName:351"));
     }
 
 }
