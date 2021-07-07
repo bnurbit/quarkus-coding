@@ -12,17 +12,17 @@ public class GreetingService {
     @Inject
     private GreetingConfig greetingConfig;
 
-//    @ConfigProperty(name = "greeting.name")
+//    @ConfigProperty(name = "greeting.name")   // error if the property is not defined
 //    private String name;
 //
 //    @ConfigProperty(name = "greeting.suffix", defaultValue = "english")
 //    private String suffix;
 //
-//    @ConfigProperty(name = "greeting.prefix")
+//    @ConfigProperty(name = "greeting.prefix") // no error if the property is not defined
 //    private Optional<String> prefix;
 
     public String hello(){
-        //final String name = ConfigProvider.getConfig().getValue("greeting.name", String.class);
+        //final String name = ConfigProvider.getConfig().getValue("greeting.name", String.class); // another way of accessing config properties
         return greetingConfig.getPrefix().orElse("null")
                 + "-" + greetingConfig.getName()
                 + "-" + greetingConfig.getSuffix()

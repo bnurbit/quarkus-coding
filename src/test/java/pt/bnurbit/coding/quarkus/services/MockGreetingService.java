@@ -10,7 +10,7 @@ public class MockGreetingService extends GreetingService {
 
     @Override
     public String hello(){
-        return "asd";
+        return "null-test-english-country-CountryName:351";
     }
 
     @Override

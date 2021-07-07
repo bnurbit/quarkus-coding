@@ -7,6 +7,10 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
 import java.util.logging.Logger;
 
+/**
+ * StartupEvent and ShutdownEvent are marker interfaces
+ * Annotation observes - look for events and when it is fired executes the method
+ */
 @ApplicationScoped
 public class AppLifecycleListener {
 

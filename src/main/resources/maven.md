@@ -40,4 +40,6 @@ These files are from Maven wrapper. It works similarly to the Gradle wrapper.
 Allow to run the Maven project without having Maven installed and present on the path. 
 It downloads the correct Maven version if it is not found.
 
-* mvnw quarkus:dev
+# Running from Maven
+- mvnw quarkus:dev -Dgreeting.name="Hello"
+

@@ -9,11 +9,34 @@ unified reactive and imperative programming model to optimally address a wider r
 # Configuration
 * Install Quarkus Run Configs in Intellij
 
+# Profiles
+By default:
+- dev
+- prod
+- test
+
 #Defining properties
 - if no prefix, then it's general property for all profiles
 - if prefix %<profile-name>. then properties are used for that profile only
 - all configs: https://quarkus.io/guides/all-config
 - not all properties refresh automatically, for instance, the datasource url
+- quarkus can cache some properties, running clean will properly refresh the properties
+
+# Packaging
+- mvn package
+- produces several outputs in /target
+- /target/<app>-<app-version>-SNAPSHOT.jar -> not a runnable jar. the regular artifact produced by maven that contains just the classes and resources
+- /target/quarkus-app/quarkus-run.jar -> runnable jar. not a fat jar (dependencies are copied into subdirectories of quarkus-app/lib/)
+- /target/config -> application.properties should go here
+
+# Running Jar
+- java -jar <jar-name>.jar
+
+# MicroProfile
+- from Eclipse
+- aim to optimize Enterprise Java for the microservices architecture
+- @ConfigProperty
 
 # Annotations
-- ConfigProperties
+- @ConfigProperties - loading of configuration properties
+- @QuarkusTest - bootstrap app for testing in a different port, inject mock services
