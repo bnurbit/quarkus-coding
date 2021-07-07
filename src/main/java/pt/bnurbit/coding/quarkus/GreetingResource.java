@@ -52,7 +52,7 @@ public class GreetingResource {
     @Path("/json/param")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public String post(@HeaderParam("name") String hName, @QueryParam("name") String name) {
+    public String post(@HeaderParam("name") String hName, @QueryParam("name") String name) { // can have the same name
         return "{\"Param\": \"" + name + "\",\"Header\": \"" + hName + "\"}";
     }
 }
