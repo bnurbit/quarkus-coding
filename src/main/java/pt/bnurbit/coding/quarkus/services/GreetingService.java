@@ -1,9 +1,13 @@
 package pt.bnurbit.coding.quarkus.services;
 
+import io.quarkus.arc.config.ConfigProperties;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import pt.bnurbit.coding.quarkus.config.GreetingConfig;
+import pt.bnurbit.coding.quarkus.converters.Base64Value;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.Optional;
 import java.util.UUID;
 
 @ApplicationScoped
@@ -12,14 +16,17 @@ public class GreetingService {
     @Inject
     private GreetingConfig greetingConfig;
 
-//    @ConfigProperty(name = "greeting.name")   // error if the property is not defined
-//    private String name;
-//
-//    @ConfigProperty(name = "greeting.suffix", defaultValue = "english")
-//    private String suffix;
-//
-//    @ConfigProperty(name = "greeting.prefix") // no error if the property is not defined
-//    private Optional<String> prefix;
+    @ConfigProperty(name = "greeting.name")   // error if the property is not defined
+    private String name;
+
+    @ConfigProperty(name = "greeting.suffix", defaultValue = "english")
+    private String suffix;
+
+    @ConfigProperty(name = "greeting.prefix") // no error if the property is not defined
+    private Optional<String> prefix;
+
+    @ConfigProperty(name = "greeting.base64name") // encoded name
+    private Base64Value base64Name;
 
     public String hello(){
         //final String name = ConfigProvider.getConfig().getValue("greeting.name", String.class); // another way of accessing config properties
