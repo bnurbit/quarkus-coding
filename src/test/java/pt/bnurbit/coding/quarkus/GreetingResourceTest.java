@@ -11,7 +11,6 @@ import static org.hamcrest.CoreMatchers.is;
 @QuarkusTest
 public class GreetingResourceTest {
 
-
     @Test
     public void testHelloEndpoint() {
         final String name = UUID.randomUUID().toString();
@@ -33,5 +32,4 @@ public class GreetingResourceTest {
                 .statusCode(200)
                 .body(is("null-test-english-country-CountryName:351"));
     }
-
 }

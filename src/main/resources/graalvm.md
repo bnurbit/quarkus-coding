@@ -7,10 +7,10 @@ GraalVM is a high-performance runtime that provides significant improvements in 
 
 ### Configuration
 1. Unzip to C:\Program Files\GraalVM\graalvm-ce-java11-21.1.0
-2. Run in command prompt:
+1. Run in command prompt:
     * setx /M GRAALVM_HOME "C:\Program Files\GraalVM\graalvm-ce-java11-21.1.0"
     * setx /M JAVA_HOME "C:\Program Files\GraalVM\graalvm-ce-java11-21.1.0"
     * setx /M PATH "%JAVA_HOME%\bin;%PATH%"
-3. Check in command prompt:
+1. Check in command prompt:
    * java -version
 

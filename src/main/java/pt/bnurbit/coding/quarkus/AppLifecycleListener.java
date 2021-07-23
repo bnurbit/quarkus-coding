@@ -16,11 +16,11 @@ public class AppLifecycleListener {
 
     public static final Logger LOGGER = Logger.getLogger("Lifecycle");
 
-    public void onStart(@Observes StartupEvent startupEvent){
+    public void onStart(@Observes StartupEvent startupEvent) {
         LOGGER.info("onStart executed");
     }
 
-    public void onStart(@Observes ShutdownEvent shutdownEvent){
+    public void onStart(@Observes ShutdownEvent shutdownEvent) {
         LOGGER.info("onStop executed");
     }
 }

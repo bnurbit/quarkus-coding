@@ -4,14 +4,13 @@ https://maven.apache.org/
 Maven is a powerful project management tool that is based on POM (project object model). 
 It is used for projects build, dependency and documentation.
 
-Download binary zip instead of source zip
-
 ### Configuration
+1. Download binary zip instead of source zip
 1. Unzip to C:\Program Files\Maven\apache-maven-3.8.1
-2. Run in command prompt:
+1. Run in command prompt:
     * setx /M MAVEN_HOME "C:\Program Files\Maven\apache-maven-3.8.1"
     * setx /M PATH "%MAVEN_HOME%\bin;%PATH%"
-3. Check in command prompt:
+1. Check in command prompt:
    * mvn -version
    
 ### Create Quarkus project with maven plugin
@@ -29,11 +28,14 @@ Profile dev - live coding activated
 - Quarkus loads everything that was changed on demand
 
 Dependencies:
-- quarkus-arc       https://quarkus.io/blog/quarkus-dependency-injection/
 - quarkus-resteasy
-- quarkus-junit5    general testing
-- rest-assured      rest endpoints testing
+- quarkus-junit5 - general testing
+- rest-assured - rest endpoints testing
 
+Plugins:
+- quarkus-maven-plugin
+- maven-compiler-plugin - used to compile the source code of a Maven project (compile, testCompile)
+- maven-surefire-plugin - used during the test phase of the build lifecycle to execute the unit tests of an application
 
 ### mvnw and mvnw.cmd
 These files are from Maven wrapper. It works similarly to the Gradle wrapper.

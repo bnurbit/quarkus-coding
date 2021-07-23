@@ -1,6 +1,6 @@
 # Quarkus
-https://quarkus.io/
-https://www.udemy.com/course/quarkus-backend-development-java/
+- https://quarkus.io/
+- https://www.udemy.com/course/quarkus-backend-development-java/
 
 Quarkus is a Kubernetes Native Java framework tailored for OpenJDK HotSpot and GraalVM, crafted from best-of-breed Java libraries and standards. 
 The goal of Quarkus is to make Java a leading platform in Kubernetes and serverless environments while offering developers a 
@@ -10,10 +10,7 @@ unified reactive and imperative programming model to optimally address a wider r
 * Install Quarkus Run Configs in Intellij
 
 ### Profiles
-By default:
-- dev
-- prod
-- test
+By default: dev, prod, test
 
 ### Defining properties
 - if no prefix, then it's general property for all profiles

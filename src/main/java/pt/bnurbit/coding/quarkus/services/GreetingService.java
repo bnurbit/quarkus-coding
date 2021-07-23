@@ -1,6 +1,5 @@
 package pt.bnurbit.coding.quarkus.services;
 
-import io.quarkus.arc.config.ConfigProperties;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import pt.bnurbit.coding.quarkus.config.GreetingConfig;
 import pt.bnurbit.coding.quarkus.converters.Base64Value;
@@ -28,7 +27,7 @@ public class GreetingService {
     @ConfigProperty(name = "greeting.base64name") // encoded name
     private Base64Value base64Name;
 
-    public String hello(){
+    public String hello() {
         //final String name = ConfigProvider.getConfig().getValue("greeting.name", String.class); // another way of accessing config properties
         return greetingConfig.getPrefix().orElse("null")
                 + "-" + greetingConfig.getName()
@@ -37,7 +36,7 @@ public class GreetingService {
                 + ":" + greetingConfig.getCountry().getId();
     }
 
-    public String hello(String name){
+    public String hello(String name) {
         return String.format("Hello %s, your id is %s", name, UUID.randomUUID());
     }
 }

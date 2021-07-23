@@ -9,11 +9,11 @@ import java.util.List;
 @Path("/book")
 public class BookResource {
 
-    private static final List<String> books = new ArrayList<>(Arrays.asList("Java 11 - Beginner to Guru", "Quarkus Fundamentals", "Data Structures and Algorithms")){
+    private static final List<String> books = new ArrayList<>(Arrays.asList("Java 11 - Beginner to Guru", "Quarkus Fundamentals", "Data Structures and Algorithms")) {
         @Override
-        public String toString(){
+        public String toString() {
             StringBuilder builder = new StringBuilder();
-            for(var b : this){
+            for (var b : this) {
                 builder.append(b).append(System.lineSeparator());
             }
             return builder.toString();
@@ -22,13 +22,13 @@ public class BookResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getBooks(){
+    public String getBooks() {
         return books.toString();
     }
 
     @POST
     @Produces(MediaType.TEXT_PLAIN)
-    public String addBook(String book){
+    public String addBook(String book) {
         books.add(book);
         return getBooks();
     }
@@ -36,8 +36,8 @@ public class BookResource {
     @PUT
     @Path("/{index}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String addBook(@PathParam("index") int index, String book){
-        if(index < books.size()){
+    public String addBook(@PathParam("index") int index, String book) {
+        if (index < books.size()) {
             books.set(index, book);
         }
         return getBooks();
@@ -46,8 +46,8 @@ public class BookResource {
     @DELETE
     @Path("/{index}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String addBook(@PathParam("index") int index){
-        if(index < books.size()){
+    public String addBook(@PathParam("index") int index) {
+        if (index < books.size()) {
             books.remove(index);
         }
         return getBooks();

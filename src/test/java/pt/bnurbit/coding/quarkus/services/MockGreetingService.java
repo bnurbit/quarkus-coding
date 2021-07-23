@@ -9,12 +9,12 @@ import javax.enterprise.context.ApplicationScoped;
 public class MockGreetingService extends GreetingService {
 
     @Override
-    public String hello(){
+    public String hello() {
         return "null-test-english-country-CountryName:351";
     }
 
     @Override
-    public String hello(String name){
+    public String hello(String name) {
         return String.format("Hello %s, your id is %s", name, "123");
     }
 }
