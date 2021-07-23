@@ -37,3 +37,5 @@ By default: dev, prod, test
 ### Annotations
 - @ConfigProperties - loading of configuration properties
 - @QuarkusTest - bootstrap app for testing in a different port, inject mock services
+- @TestHTTPResource - directly inject the URL into the test
+
