@@ -1,6 +1,7 @@
 package pt.bnurbit.coding.quarkus.services;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.jboss.logging.Logger;
 import pt.bnurbit.coding.quarkus.config.GreetingConfig;
 import pt.bnurbit.coding.quarkus.converters.Base64Value;
 
@@ -11,6 +12,8 @@ import java.util.UUID;
 
 @ApplicationScoped
 public class GreetingService {
+
+    private static Logger LOGGER = Logger.getLogger(GreetingService.class.getName());
 
     @Inject
     private GreetingConfig greetingConfig;
@@ -28,6 +31,8 @@ public class GreetingService {
     private Base64Value base64Name;
 
     public String hello() {
+        LOGGER.debug("Saying hello to random user");
+
         //final String name = ConfigProvider.getConfig().getValue("greeting.name", String.class); // another way of accessing config properties
         return greetingConfig.getPrefix().orElse("null")
                 + "-" + greetingConfig.getName()
