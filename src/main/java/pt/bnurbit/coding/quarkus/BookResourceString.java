@@ -3,13 +3,12 @@ package pt.bnurbit.coding.quarkus;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-@Path("/book")
-public class BookResource {
+@Path("/book/string")
+public class BookResourceString {
 
-    private static final List<String> books = new ArrayList<>(Arrays.asList("Java 11 - Beginner to Guru", "Quarkus Fundamentals", "Data Structures and Algorithms")) {
+    private static final List<String> books = new ArrayList<>() {
         @Override
         public String toString() {
             StringBuilder builder = new StringBuilder();
@@ -19,6 +18,12 @@ public class BookResource {
             return builder.toString();
         }
     };
+
+    static {
+        books.add("Java 11 - Beginner to Guru");
+        books.add("Quarkus Fundamentals");
+        books.add("Data Structures and Algorithms");
+    }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

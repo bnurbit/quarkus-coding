@@ -45,3 +45,8 @@ It downloads the correct Maven version if it is not found.
 ### Running from Maven
 - mvnw quarkus:dev -Dgreeting.name="Hello"
 
+### Other dependencies
+- lombok - generate boilerplate code
+- quarkus-resteasy-jsonb / quarkus-resteasy-jackson - RESTEasy JSON serialization extensions. When added, Quarkus will use the application/json media type by default (can be overridden)
+
+
