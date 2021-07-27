@@ -1,11 +1,15 @@
 package pt.bnurbit.coding.quarkus.config;
 
 import io.quarkus.arc.config.ConfigProperties;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.Size;
 import java.util.Optional;
 
 @ConfigProperties(prefix = "greeting")
+@Getter
+@Setter
 public class GreetingConfig {
 
     // needs quarkus-hibernate-validator extension
@@ -15,56 +19,10 @@ public class GreetingConfig {
     private Optional<String> prefix;
     private CountryConfig country;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSuffix() {
-        return suffix;
-    }
-
-    public void setSuffix(String suffix) {
-        this.suffix = suffix;
-    }
-
-    public Optional<String> getPrefix() {
-        return prefix;
-    }
-
-    public void setPrefix(Optional<String> prefix) {
-        this.prefix = prefix;
-    }
-
-    public CountryConfig getCountry() {
-        return country;
-    }
-
-    public void setCountry(CountryConfig country) {
-        this.country = country;
-    }
-
+    @Getter
+    @Setter
     public static class CountryConfig {
         private String name;
         private String id;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
     }
 }
