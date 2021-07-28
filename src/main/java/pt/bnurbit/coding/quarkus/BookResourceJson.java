@@ -64,7 +64,7 @@ public class BookResourceJson {
 
         // alternative option 1
         Set<ConstraintViolation<Book>> violations = validator.validate(book);
-        if(violations.size() > 0) {
+        if(!violations.isEmpty()) {
             return Response.status(400).build();
         }
 

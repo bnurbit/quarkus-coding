@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 import javax.inject.Inject;
 
 @QuarkusTest
-public class GreetingServiceTest {
+class GreetingServiceTest {
 
     @Inject
     private GreetingService greetingService;
 
     @Test
-    public void checkReturnsHello() {
+    void checkReturnsHello() {
         Assertions.assertEquals("null-test-english-country-CountryName:351", greetingService.hello()); // uses mock service
     }
 }

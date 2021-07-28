@@ -9,10 +9,10 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
-public class GreetingResourceTest {
+class GreetingResourceTest {
 
     @Test
-    public void testHelloEndpoint() {
+    void testHelloEndpoint() {
         final String name = UUID.randomUUID().toString();
         given()
                 .when()
@@ -24,7 +24,7 @@ public class GreetingResourceTest {
     }
 
     @Test
-    public void testHelloConfigEndpoint() {
+    void testHelloConfigEndpoint() {
         given()
                 .when()
                 .get("/hello/config")
