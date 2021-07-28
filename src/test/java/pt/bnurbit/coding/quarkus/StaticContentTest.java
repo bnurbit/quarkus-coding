@@ -3,6 +3,7 @@ package pt.bnurbit.coding.quarkus;
 import io.quarkus.test.common.http.TestHTTPResource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.apache.commons.io.IOUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -24,5 +25,6 @@ class StaticContentTest {
         System.out.println(body);
 //        assert body.contains("Your new Cloud-Native application is ready!");
         assert body.contains("This is a test resource");
+        Assertions.assertFalse(body.contains("abc"));
     }
 }
