@@ -48,5 +48,5 @@ It downloads the correct Maven version if it is not found.
 ### Other dependencies
 - lombok - generate boilerplate code
 - quarkus-resteasy-jsonb / quarkus-resteasy-jackson - RESTEasy JSON serialization extensions. When added, Quarkus will use the application/json media type by default (can be overridden)
-
+- quarkus-hibernate-validator - validation of input/output of REST services or parameters and return values of methods in the business services.
 
