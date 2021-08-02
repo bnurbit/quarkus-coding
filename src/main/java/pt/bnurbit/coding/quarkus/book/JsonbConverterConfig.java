@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus.converters;
+package pt.bnurbit.coding.quarkus.book;
 
 import io.quarkus.jsonb.JsonbConfigCustomizer;
 

@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus;
+package pt.bnurbit.coding.quarkus.book;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

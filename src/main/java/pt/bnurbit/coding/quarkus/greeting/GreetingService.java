@@ -1,9 +1,7 @@
-package pt.bnurbit.coding.quarkus.services;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
-import pt.bnurbit.coding.quarkus.config.GreetingConfig;
-import pt.bnurbit.coding.quarkus.converters.Base64Value;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

@@ -1,6 +1,4 @@
-package pt.bnurbit.coding.quarkus;
-
-import pt.bnurbit.coding.quarkus.services.GreetingService;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

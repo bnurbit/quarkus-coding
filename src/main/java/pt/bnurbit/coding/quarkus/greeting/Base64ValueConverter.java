@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus.converters;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import org.eclipse.microprofile.config.spi.Converter;
 

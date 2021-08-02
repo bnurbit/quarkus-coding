@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;

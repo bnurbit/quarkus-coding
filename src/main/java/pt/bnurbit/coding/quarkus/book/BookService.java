@@ -1,6 +1,4 @@
-package pt.bnurbit.coding.quarkus.services;
-
-import pt.bnurbit.coding.quarkus.data.Book;
+package pt.bnurbit.coding.quarkus.book;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.validation.Valid;

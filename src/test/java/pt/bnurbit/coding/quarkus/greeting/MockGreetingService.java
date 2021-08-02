@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus.services;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import io.quarkus.test.Mock;
 

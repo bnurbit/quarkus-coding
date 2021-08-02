@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus.converters;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import lombok.Getter;
 import lombok.Setter;

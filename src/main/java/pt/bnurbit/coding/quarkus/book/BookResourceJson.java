@@ -1,7 +1,4 @@
-package pt.bnurbit.coding.quarkus;
-
-import pt.bnurbit.coding.quarkus.data.Book;
-import pt.bnurbit.coding.quarkus.services.BookService;
+package pt.bnurbit.coding.quarkus.book;
 
 import javax.inject.Inject;
 import javax.validation.ConstraintViolation;

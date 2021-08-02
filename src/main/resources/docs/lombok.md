@@ -37,7 +37,8 @@ Very useful for immutable classes (like configuration classes)
 
 - @Builder
   - class level: generate the builder pattern, without the need of writing an extra Builder class
-  
+  - constructor level: generate the builder pattern only for the fields in the constructor  
+
 ### Checked Exceptions
 Java APIs are often designed to throw a number of checked exceptions, forcing the client to either catch or declare throws
 

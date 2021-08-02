@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus.data;
+package pt.bnurbit.coding.quarkus.book;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

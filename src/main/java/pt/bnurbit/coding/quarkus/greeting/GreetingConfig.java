@@ -1,4 +1,4 @@
-package pt.bnurbit.coding.quarkus.config;
+package pt.bnurbit.coding.quarkus.greeting;
 
 import io.quarkus.arc.config.ConfigProperties;
 import lombok.Getter;
