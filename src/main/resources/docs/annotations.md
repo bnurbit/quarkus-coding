@@ -34,6 +34,7 @@ The javax prefix is used by the Java programming language for a package of stand
 - @PathParam
 - @HeaderParam
 - @QueryParam
+- @FormParam
 - @Consumes - defines the expected content-type consumed by this request (parameters)
 - @Produces - defines the expected content-type produced by this request (return type)
 
@@ -48,6 +49,9 @@ The javax prefix is used by the Java programming language for a package of stand
 #### JSON
 - @JsonbProperty
 
+## Resteasy
+- @PartType
+- @MultipartForm
 
 ## JUnit
 - @Test
