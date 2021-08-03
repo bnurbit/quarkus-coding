@@ -29,16 +29,6 @@ By default: dev, prod, test
 ### Running Jar
 - java -jar <jar-name>.jar
 
-### MicroProfile
-- from Eclipse
-- aim to optimize Enterprise Java for the microservices architecture
-- @ConfigProperty
-
-### Annotations
-- @ConfigProperties - loading of configuration properties
-- @QuarkusTest - bootstrap app for testing in a different port, inject mock services
-- @TestHTTPResource - directly inject the URL into the test
-
 ### Logging
 - quarkus.log.level - By default is INFO
 - quarkus.log.category."<package-name>".level - Set level for a particular package
