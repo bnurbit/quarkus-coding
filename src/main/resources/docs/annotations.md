@@ -49,6 +49,11 @@ The javax prefix is used by the Java programming language for a package of stand
 #### JSON
 - @JsonbProperty
 
+#### Sockets
+- @ServerEndpoint
+- @PathParam
+- @OnClose, @OnError, @OnMessage, @onOpen
+
 ## Resteasy
 - @PartType
 - @MultipartForm

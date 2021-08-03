@@ -44,7 +44,7 @@ public class BookResourceJson {
     @POST
     public Response addBook(@Valid Book book) {
 
-        if(books.size() >= 5){
+        if (books.size() >= 5) {
             return Response.status(400).entity("Maximum number of books reached!").build();
         }
         books.add(book);
@@ -61,7 +61,7 @@ public class BookResourceJson {
 
         // alternative option 1
         Set<ConstraintViolation<Book>> violations = validator.validate(book);
-        if(!violations.isEmpty()) {
+        if (!violations.isEmpty()) {
             return Response.status(400).build();
         }
 

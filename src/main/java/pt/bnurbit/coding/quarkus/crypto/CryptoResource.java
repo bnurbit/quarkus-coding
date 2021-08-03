@@ -20,7 +20,7 @@ public class CryptoResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public CompletionStage<Collection<Currency>> getCrypto(@QueryParam("id") String id){
+    public CompletionStage<Collection<Currency>> getCrypto(@QueryParam("id") String id) {
         return cryptoService.getCurrency(id);
     }
 }

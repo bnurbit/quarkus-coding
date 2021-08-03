@@ -6,7 +6,7 @@ import javax.validation.Valid;
 @ApplicationScoped
 public class BookService {
 
-    public Book checkBook(@Valid Book book){
+    public Book checkBook(@Valid Book book) {
 
         // validation logic
         return book;
