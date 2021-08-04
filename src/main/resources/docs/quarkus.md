@@ -29,12 +29,3 @@ By default: dev, prod, test
 ### Running Jar
 - java -jar <jar-name>.jar
 
-### Logging
-- quarkus.log.level - By default is INFO
-- quarkus.log.category."<package-name>".level - Set level for a particular package
-- quarkus.log.console.enable - Enable/Disable logging to the console
-- quarkus.log.console.color - Enable/Disable colors in the console
-- quarkus.log.console.format - Specify logging format: https://quarkus.io/guides/logging
-- quarkus.log.file.enable - Enable/Disable logging to a file
-- quarkus.log.file.path - Specify the logging file path, default is ./quarkus.log (target folder)
-- quarkus.log.console.json - Enable/Disable logging in json format, requires io.quarkus quarkus-logging-json dependency. Useful to use with a searching engine (like ElasticSearch)

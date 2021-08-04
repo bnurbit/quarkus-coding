@@ -1,0 +1,23 @@
+---
+openapi: 3.0.3
+info:
+  title: Some static API
+  description: Some static API
+  version: "1.1"
+servers:
+  - url: some_url
+paths:
+  /book/json:
+    get:
+      responses:
+        "200":
+          description: OK
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        "200":
+          description: OK

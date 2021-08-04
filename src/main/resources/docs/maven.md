@@ -45,12 +45,16 @@ It downloads the correct Maven version if it is not found.
 ### Running from Maven
 - mvnw quarkus:dev -Dgreeting.name="Hello"
 
+### Adding dependencies
+- mvnw quarkus:add-extension -Dextensions="<extension_name>"
+
 ### Other dependencies
 - lombok - generate boilerplate code
 - quarkus-resteasy-jsonb / quarkus-resteasy-jackson - RESTEasy JSON serialization extensions. When added, Quarkus will use the application/json media type by default (can be overridden)
 - quarkus-hibernate-validator - validation of input/output of REST services or parameters and return values of methods in the business services
 - quarkus-rest-client - using of RESTEasy REST Client in order to interact with REST APIs
 - resteasy-multipart-provider - 
+- quarkus-smallrye-openapi - 
 
 
 

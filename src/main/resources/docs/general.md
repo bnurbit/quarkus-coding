@@ -22,3 +22,5 @@ https://github.com/public-apis/public-apis
 - HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme or port) than its own from which a browser should permit loading of resources.
 - also relies on a mechanism by which browsers make a “preflight” request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
 
+### OpenAPI and Swagger
+- standard format to define the structure and syntax of REST APIs
