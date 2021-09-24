@@ -18,9 +18,19 @@ https://github.com/public-apis/public-apis
 - Consider using WebSockets for instantaneous data without the browser refresh (social feeds, multiplayer games, collaborative editing, chats, ...)
 
 
-### CORS - cross-origin resource sharing
-- HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme or port) than its own from which a browser should permit loading of resources.
-- also relies on a mechanism by which browsers make a “preflight” request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+### SOP and CORS
+- server-side configurations that clients decide to enforce or not. 
+  - Browsers enforce it to prevent attacks
+  - Development tools (like Postman) don't care about it
+- Same-origin policy
+  - restricts cross-origin interaction between documents, scripts or media files from one origin to a different origin
+  - necessary to prevent Cross-Site Request Forgery (CSRF) - visiting a malicious website that could load the content of the correct site 
+- CORS 
+  - HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme or port) than its own from which a browser should permit loading of resources
+  - allows servers to specify trusted origins to be used in cross-origin requests
+  - can be 
+    - Simple - HTTP method GET, POST or HEAD; Content-Type text/plain, application/x-www-form-urlencoded or multipart/form-data
+    - Preflight - others - used to check that the server will permit the actual request
 
 ### OpenAPI and Swagger
 - standard format to define the structure and syntax of REST APIs
