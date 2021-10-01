@@ -3,20 +3,16 @@
 ### Base64 converter
 echo -n <string> | base64
 
-
 ### Naming convention to write tests
 void <method-name>_<condition>_<expected-result>
 
-
 ### Public apis
 https://github.com/public-apis/public-apis
-
 
 ### WebSockets
 - Persistent connection between a client and server. WebSockets provide a bidirectional, full-duplex communications channel that operates over HTTP through a single TCP/IP socket connection. At its core, the WebSocket protocol facilitates message passing between a client and server.
 - Useful tool for building web applications that need to provide these instant, real-time updates and communication
 - Consider using WebSockets for instantaneous data without the browser refresh (social feeds, multiplayer games, collaborative editing, chats, ...)
-
 
 ### SOP and CORS
 - server-side configurations that clients decide to enforce or not. 
@@ -31,6 +27,22 @@ https://github.com/public-apis/public-apis
   - can be 
     - Simple - HTTP method GET, POST or HEAD; Content-Type text/plain, application/x-www-form-urlencoded or multipart/form-data
     - Preflight - others - used to check that the server will permit the actual request
+
+### Fault Tolerance
+- features like 
+  - retries
+  - timeouts
+  - fallbacks
+  - circuit breakers
+
+### Health Check
+- allows the infrastructure to be aware of the state of the application (very important in platforms like Kubernetes)
+- two types
+  - liveness probes - if the application is running ok or not. When down, the platform might restart the application
+  - readiness probes - if the application is warm enough to reply to requests in a reasonable amount of time
+
+### Metrics
+- sending monitoring information to services like Prometheus
 
 ### OpenAPI and Swagger
 - standard format to define the structure and syntax of REST APIs

@@ -112,6 +112,13 @@
             max-height: 300px;
         }
     </style>
+    <script type="application/javascript">
+        // opening this file directly will show that the request actually fails
+        var request = new XMLHttpRequest()
+        request.open('GET', 'http://localhost:8080/api/hello', true)
+        request.send()
+        console.log(request.responseText)
+    </script>
 </head>
 <body>
 
