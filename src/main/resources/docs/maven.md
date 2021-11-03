@@ -58,6 +58,7 @@ It downloads the correct Maven version if it is not found.
   - quarkus-undertow-websockets - 
   - quarkus-smallrye-openapi - 
   - quarkus-smallrye-fault-tolerance - 
+  - quarkus-vertx-web (renamed to quarkus-reactive-routes) -
 - org.jboss.resteasy.resteasy-multipart-provider -
 
 ### Test dependencies
