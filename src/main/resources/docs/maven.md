@@ -29,8 +29,8 @@ Profile dev - live coding activated
 
 Dependencies:
 - quarkus-resteasy
-- quarkus-junit5 - general testing
-- rest-assured - rest endpoints testing
+- quarkus-junit5
+- rest-assured
 
 Plugins:
 - quarkus-maven-plugin
@@ -49,14 +49,20 @@ It downloads the correct Maven version if it is not found.
 - mvnw quarkus:add-extension -Dextensions="<extension_name>"
 
 ### Other dependencies
-- lombok - generate boilerplate code
-- quarkus-resteasy-jsonb / quarkus-resteasy-jackson - RESTEasy JSON serialization extensions. When added, Quarkus will use the application/json media type by default (can be overridden)
-- quarkus-hibernate-validator - validation of input/output of REST services or parameters and return values of methods in the business services
-- quarkus-rest-client - using of RESTEasy REST Client in order to interact with REST APIs
-- resteasy-multipart-provider - 
-- quarkus-smallrye-openapi - 
+- io.quarkus
+  - quarkus-resteasy
+  - quarkus-logging-json
+  - quarkus-resteasy-jsonb / quarkus-resteasy-jackson - RESTEasy JSON serialization extensions. When added, Quarkus will use the application/json media type by default (can be overridden)
+  - quarkus-hibernate-validator - validation of input/output of REST services or parameters and return values of methods in the business services
+  - quarkus-rest-client - using of RESTEasy REST Client in order to interact with REST APIs
+  - quarkus-undertow-websockets - 
+  - quarkus-smallrye-openapi - 
+  - quarkus-smallrye-fault-tolerance - 
+- org.jboss.resteasy.resteasy-multipart-provider -
 
-
+### Test dependencies
+- io.quarkus.quarkus-junit5 - general testing
+- io.rest-assured.rest-assured - rest endpoints testing
 
 
 

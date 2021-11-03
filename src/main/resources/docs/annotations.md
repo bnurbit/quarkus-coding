@@ -13,6 +13,7 @@ From Eclipse, the aim is to optimize Enterprise Java for the microservices archi
 - @ConfigProperty
 - @RegisterRestClient - allows Quarkus to know that the annotated interface is meant to be available for CDI injection as a REST Client
 - @RestClient
+- @OpenApiDefinition
 
 
 ## Javax
