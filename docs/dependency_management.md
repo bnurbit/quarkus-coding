@@ -1,4 +1,4 @@
-# Maven
+# Dependency Management (Maven)
 https://maven.apache.org/
 
 Maven is a powerful project management tool that is based on POM (project object model). 
@@ -59,11 +59,20 @@ It downloads the correct Maven version if it is not found.
   - quarkus-smallrye-openapi - 
   - quarkus-smallrye-fault-tolerance - 
   - quarkus-vertx-web (renamed to quarkus-reactive-routes) -
+  - quarkus-agroal - light weight connection pool implementation designed for very high performance and scalability. Features integration with other Quarkus components (security, transaction management, health,  metrics)
 - org.jboss.resteasy.resteasy-multipart-provider -
 
 ### Test dependencies
 - io.quarkus.quarkus-junit5 - general testing
 - io.rest-assured.rest-assured - rest endpoints testing
 
-
-
+### Maven vs Gradle
+Gradle
+- high performance
+- groovy-based domain-specific language (DSL)
+- preferred for Android applications
+- more flexible (code writing, tasks with lifecycle)
+Maven
+- standardization
+- extensible markup language (XML)
+- compatible with other languages besides Java
