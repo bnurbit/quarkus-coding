@@ -6,7 +6,6 @@ import io.quarkus.panache.common.Sort;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.LockModeType;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -18,8 +17,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Path("/book/entity")
 public class BookEntityResource {

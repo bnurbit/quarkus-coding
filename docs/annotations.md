@@ -29,7 +29,7 @@ From Eclipse, the aim is to optimize Enterprise Java for the microservices archi
 - rest.client
   - @RestClient 
   - @RegisterRestClient - allows Quarkus to know that the annotated interface is meant to be available for CDI injection as a REST Client
-  
+
 ## Javax
 The javax prefix is used by the Java programming language for a package of standard Java extensions.
 - enterprise.context
@@ -40,6 +40,13 @@ The javax prefix is used by the Java programming language for a package of stand
   - @Inject
 - json.bind
   - @JsonbProperty
+- persistence
+  - @Entity
+  - @GeneratedValue
+  - @Id
+  - @OneToMany, @ManyToOne, @ManyToMany, @OneToOne
+- transactional
+  - @Transactional
 - validation.constraints
   - @Valid
   - @Min
@@ -58,7 +65,14 @@ The javax prefix is used by the Java programming language for a package of stand
   - @ServerEndpoint
   - @PathParam
   - @OnClose, @OnError, @OnMessage, @onOpen
-  
+
+## Hibernate
+- search.mapper.pojo.mapping.definition.annotation
+  - @FullTextField
+  - @KeywordField
+  - @Indexed
+  - @IndexedEmbedded
+
 ## Resteasy
 - @PartType
 - @MultipartForm

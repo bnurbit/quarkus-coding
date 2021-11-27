@@ -17,5 +17,8 @@ psql -h localhost -p 5432 -U postgres -W
 create database <database_name>;
 \connect <database_name>;
 
+### Elasticsearch
+docker run -it --rm=true --name quarkus-elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+
 ## docker useful commands
 docker inspect [OPTIONS] NAME|ID [NAME|ID...] - Return low-level information on Docker objects

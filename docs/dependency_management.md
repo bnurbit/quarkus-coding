@@ -63,6 +63,8 @@ It downloads the correct Maven version if it is not found.
   - quarkus-jdbc-h2 - jdbc driver for h2 database
   - quarkus-jdbc-mysql - jdbc driver for mysql database
   - quarkus-hibernate-orm - hibernate object–relational mapping
+  - quarkus-hibernate-orm-panache
+  - quarkus-hibernate-search-elasticsearch
 - org.jboss.resteasy.resteasy-multipart-provider -
 
 ### Test dependencies
