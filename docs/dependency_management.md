@@ -60,6 +60,9 @@ It downloads the correct Maven version if it is not found.
   - quarkus-smallrye-fault-tolerance - 
   - quarkus-vertx-web (renamed to quarkus-reactive-routes) -
   - quarkus-agroal - light weight connection pool implementation designed for very high performance and scalability. Features integration with other Quarkus components (security, transaction management, health,  metrics)
+  - quarkus-jdbc-h2 - jdbc driver for h2 database
+  - quarkus-jdbc-mysql - jdbc driver for mysql database
+  - quarkus-hibernate-orm - hibernate object–relational mapping
 - org.jboss.resteasy.resteasy-multipart-provider -
 
 ### Test dependencies
