@@ -1,34 +1,37 @@
 package pt.bnurbit.coding.quarkus.book;
 
-import lombok.AllArgsConstructor;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.panache.common.Sort;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity(name = "books")
-public class BookEntity {
+public class BookEntity extends PanacheEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    // included in panache Entity
+    // PanacheEntityBase can also be used alon with PanacheRepositoryBase
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    //private Integer id;
 
-    @NotBlank(message = "Name must not be blank")
     private String name;
 
-    @NotBlank(message = "Author must not be blank")
     private String author;
 
-    @Min(value = 1, message = "Number of pages must be at least 1")
     private Integer pages;
+
+    public static List<BookEntity> findAllBooks(){
+        return findAll().list();
+    }
+
+    public static List<BookEntity> findAllBooksSortByPages() {
+        return listAll(Sort.by("pages"));
+    }
 }
